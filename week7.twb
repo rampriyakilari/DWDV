@@ -1,0 +1,521 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20231.23.0310.1044                               -->
+<workbook original-version='18.1' source-build='2023.1.0 (20231.23.0310.1044)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Aptitude Score+ (Multiple Connections)' inline='true' name='federated.05bheiz12jl1cf1149udw1suvd4h' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Aptitude Score' name='excel-direct.0vehv370osfuem1czihv90nasd0m'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/cmrit/Documents/DWDV/Aptitude Score.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='Student Academic Information' name='excel-direct.0qvnjtf05k6bmi116b4vs0p4jdps'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/cmrit/Documents/DWDV/Student Academic Information.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Aptitude Score].[Race]' />
+              <expression op='[Student Academic Information].[Race]' />
+            </expression>
+          </clause>
+          <relation connection='excel-direct.0vehv370osfuem1czihv90nasd0m' name='Aptitude Score' table='[&apos;Aptitude Score$&apos;]' type='table'>
+            <columns gridOrigin='A1:D1001:no:A1:D1001:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Student ID' ordinal='0' />
+              <column datatype='string' name='Gender' ordinal='1' />
+              <column datatype='string' name='Race' ordinal='2' />
+              <column datatype='integer' name='Aptitude Score' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0qvnjtf05k6bmi116b4vs0p4jdps' name='Student Academic Information' table='[&apos;Student Academic Information$&apos;]' type='table'>
+            <columns gridOrigin='A1:F1001:no:A1:F1001:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Student ID' ordinal='0' />
+              <column datatype='string' name='Test preparation course' ordinal='1' />
+              <column datatype='string' name='Race' ordinal='2' />
+              <column datatype='integer' name='Math score' ordinal='3' />
+              <column datatype='integer' name='Reading score' ordinal='4' />
+              <column datatype='integer' name='Writing score' ordinal='5' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Aptitude Score].[Race]' />
+              <expression op='[Student Academic Information].[Race]' />
+            </expression>
+          </clause>
+          <relation connection='excel-direct.0vehv370osfuem1czihv90nasd0m' name='Aptitude Score' table='[&apos;Aptitude Score$&apos;]' type='table'>
+            <columns gridOrigin='A1:D1001:no:A1:D1001:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Student ID' ordinal='0' />
+              <column datatype='string' name='Gender' ordinal='1' />
+              <column datatype='string' name='Race' ordinal='2' />
+              <column datatype='integer' name='Aptitude Score' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0qvnjtf05k6bmi116b4vs0p4jdps' name='Student Academic Information' table='[&apos;Student Academic Information$&apos;]' type='table'>
+            <columns gridOrigin='A1:F1001:no:A1:F1001:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Student ID' ordinal='0' />
+              <column datatype='string' name='Test preparation course' ordinal='1' />
+              <column datatype='string' name='Race' ordinal='2' />
+              <column datatype='integer' name='Math score' ordinal='3' />
+              <column datatype='integer' name='Reading score' ordinal='4' />
+              <column datatype='integer' name='Writing score' ordinal='5' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Aptitude Score]' value='[Aptitude Score].[Aptitude Score]' />
+          <map key='[Gender]' value='[Aptitude Score].[Gender]' />
+          <map key='[Math score]' value='[Student Academic Information].[Math score]' />
+          <map key='[Race (Student Academic Information)]' value='[Student Academic Information].[Race]' />
+          <map key='[Race]' value='[Aptitude Score].[Race]' />
+          <map key='[Reading score]' value='[Student Academic Information].[Reading score]' />
+          <map key='[Student ID (Student Academic Information)]' value='[Student Academic Information].[Student ID]' />
+          <map key='[Student ID]' value='[Aptitude Score].[Student ID]' />
+          <map key='[Test preparation course]' value='[Student Academic Information].[Test preparation course]' />
+          <map key='[Writing score]' value='[Student Academic Information].[Writing score]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Aptitude Score]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D1001:no:A1:D1001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Student Academic Information]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F1001:no:A1:F1001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Student ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Student ID]</local-name>
+            <parent-name>[Aptitude Score]</parent-name>
+            <remote-alias>Student ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Aptitude Score_1BE60496409F480881308CE720554A3A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[Aptitude Score]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Aptitude Score_1BE60496409F480881308CE720554A3A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Race</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Race]</local-name>
+            <parent-name>[Aptitude Score]</parent-name>
+            <remote-alias>Race</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Aptitude Score_1BE60496409F480881308CE720554A3A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Aptitude Score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Aptitude Score]</local-name>
+            <parent-name>[Aptitude Score]</parent-name>
+            <remote-alias>Aptitude Score</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Aptitude Score_1BE60496409F480881308CE720554A3A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Student ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Student ID (Student Academic Information)]</local-name>
+            <parent-name>[Student Academic Information]</parent-name>
+            <remote-alias>Student ID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Aptitude Score_1BE60496409F480881308CE720554A3A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Test preparation course</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Test preparation course]</local-name>
+            <parent-name>[Student Academic Information]</parent-name>
+            <remote-alias>Test preparation course</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Aptitude Score_1BE60496409F480881308CE720554A3A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Race</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Race (Student Academic Information)]</local-name>
+            <parent-name>[Student Academic Information]</parent-name>
+            <remote-alias>Race</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Aptitude Score_1BE60496409F480881308CE720554A3A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Math score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Math score]</local-name>
+            <parent-name>[Student Academic Information]</parent-name>
+            <remote-alias>Math score</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Aptitude Score_1BE60496409F480881308CE720554A3A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Reading score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Reading score]</local-name>
+            <parent-name>[Student Academic Information]</parent-name>
+            <remote-alias>Reading score</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Aptitude Score_1BE60496409F480881308CE720554A3A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Writing score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Writing score]</local-name>
+            <parent-name>[Student Academic Information]</parent-name>
+            <remote-alias>Writing score</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Aptitude Score_1BE60496409F480881308CE720554A3A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Aptitude Score (Aptitude Score)' datatype='integer' name='[Aptitude Score]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Student ID (Student Academic Information)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Student ID]' role='dimension' type='ordinal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Aptitude Score' datatype='table' name='[__tableau_internal_object_id__].[Aptitude Score_1BE60496409F480881308CE720554A3A]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='1' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Aptitude Score' id='Aptitude Score_1BE60496409F480881308CE720554A3A'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[Aptitude Score].[Race]' />
+                    <expression op='[Student Academic Information].[Race]' />
+                  </expression>
+                </clause>
+                <relation connection='excel-direct.0vehv370osfuem1czihv90nasd0m' name='Aptitude Score' table='[&apos;Aptitude Score$&apos;]' type='table'>
+                  <columns gridOrigin='A1:D1001:no:A1:D1001:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='Student ID' ordinal='0' />
+                    <column datatype='string' name='Gender' ordinal='1' />
+                    <column datatype='string' name='Race' ordinal='2' />
+                    <column datatype='integer' name='Aptitude Score' ordinal='3' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.0qvnjtf05k6bmi116b4vs0p4jdps' name='Student Academic Information' table='[&apos;Student Academic Information$&apos;]' type='table'>
+                  <columns gridOrigin='A1:F1001:no:A1:F1001:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='Student ID' ordinal='0' />
+                    <column datatype='string' name='Test preparation course' ordinal='1' />
+                    <column datatype='string' name='Race' ordinal='2' />
+                    <column datatype='integer' name='Math score' ordinal='3' />
+                    <column datatype='integer' name='Reading score' ordinal='4' />
+                    <column datatype='integer' name='Writing score' ordinal='5' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Aptitude Score+ (Multiple Connections)' name='federated.05bheiz12jl1cf1149udw1suvd4h' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05bheiz12jl1cf1149udw1suvd4h'>
+            <column caption='Aptitude Score (Aptitude Score)' datatype='integer' name='[Aptitude Score]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Math score]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Race (Student Academic Information)]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Reading score]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='Aptitude Score' datatype='integer' name='[__tableau_internal_object_id__].[Aptitude Score_1BE60496409F480881308CE720554A3A]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Writing score]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='Aptitude Score' datatype='table' name='[__tableau_internal_object_id__].[Aptitude Score_1BE60496409F480881308CE720554A3A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Aptitude Score_1BE60496409F480881308CE720554A3A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Aptitude Score_1BE60496409F480881308CE720554A3A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Race (Student Academic Information)]' derivation='None' name='[none:Race (Student Academic Information):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Aptitude Score]' derivation='Sum' name='[sum:Aptitude Score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Math score]' derivation='Sum' name='[sum:Math score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Reading score]' derivation='Sum' name='[sum:Reading score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Writing score]' derivation='Sum' name='[sum:Writing score:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05bheiz12jl1cf1149udw1suvd4h].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[federated.05bheiz12jl1cf1149udw1suvd4h].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.05bheiz12jl1cf1149udw1suvd4h].[none:Race (Student Academic Information):nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.05bheiz12jl1cf1149udw1suvd4h].[none:Race (Student Academic Information):nk] * [federated.05bheiz12jl1cf1149udw1suvd4h].[Multiple Values])</rows>
+        <cols>[federated.05bheiz12jl1cf1149udw1suvd4h].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{FC2061B4-AD9B-4D89-99EA-F86DF3FFE28F}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.05bheiz12jl1cf1149udw1suvd4h].[none:Race (Student Academic Information):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.05bheiz12jl1cf1149udw1suvd4h].[:Measure Names]</field>
+            <field>[federated.05bheiz12jl1cf1149udw1suvd4h].[none:Race (Student Academic Information):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{32669C96-663C-4E6F-91BE-B1AE8582C1F0}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
